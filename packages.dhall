@@ -1,0 +1,60 @@
+let upstream =
+      https://github.com/purescript/package-sets/releases/download/psc-0.14.4-20211005/packages.dhall sha256:2ec351f17be14b3f6421fbba36f4f01d1681e5c7f46e0c981465c4cf222de5be
+
+in  upstream
+  with graphql-client =
+      { dependencies =
+          [ "aff"
+          , "aff-promise"
+          , "affjax"
+          , "argonaut-codecs"
+          , "argonaut-core"
+          , "arrays"
+          , "bifunctors"
+          , "control"
+          , "datetime"
+          , "effect"
+          , "either"
+          , "enums"
+          , "exceptions"
+          , "foldable-traversable"
+          , "foreign"
+          , "foreign-generic"
+          , "foreign-object"
+          , "functions"
+          , "halogen-subscriptions"
+          , "heterogeneous"
+          , "http-methods"
+          , "integers"
+          , "lists"
+          , "maybe"
+          , "media-types"
+          , "newtype"
+          , "node-buffer"
+          , "node-fs"
+          , "nullable"
+          , "numbers"
+          , "ordered-collections"
+          , "parsing"
+          , "prelude"
+          , "profunctor"
+          , "profunctor-lenses"
+          , "psci-support"
+          , "quickcheck"
+          , "record"
+          , "spec"
+          , "spec-discovery"
+          , "string-parsers"
+          , "strings"
+          , "strings-extra"
+          , "transformers"
+          , "tuples"
+          , "typelevel-prelude"
+          , "unicode"
+          ]
+      , repo =
+          "https://github.com/OxfordAbstracts/purescript-graphql-client.git"
+      , version =
+          {- This version was manually set to a hash as the latest release does is missing the module GraphQL.Client.Variables.TypeName -}
+          "954345c904ffdfe179617b6060e9476d1edc8fc3"
+      }
